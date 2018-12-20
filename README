@@ -10,7 +10,7 @@ sources:
 - http://pubs.opengroup.org/onlinepubs/009695399/functions/dlsym.html
 - https://www.binaryhexconverter.com/hex-to-decimal-converter
 
-gdb script: 
+gdb script:    
 
 Script started on 2018-11-02 17:02:45-04:00
 ]0;cbirdsey@archlinux:~/Desktop/assign04[cbirdsey@archlinux assign04]$ gdb self-linker

@@ -24,7 +24,7 @@ main(int argc, char *argv[]) {
 
     //get address of function strcpy 
     void * (*func_addr); 
-    * (void **)(&func_addr) = dlsym(handle, "strcpy");
+    func_addr = dlsym(handle, "strcpy");
     if(!func_addr) {
         fprintf(stderr, "%s\n", dlerror()); 
         return 0; 
@@ -32,8 +32,10 @@ main(int argc, char *argv[]) {
 
     //input into global offset table 
     void * GOT_FUNC = ((&_GLOBAL_OFFSET_TABLE_) + 3);
-    /*GOT entry for strcopy is always 24 bytes from &_GLOBAL_OFFSET_TABLE_; 
-    therefore adding 3-- (3*8 = 24)*/
+
+    /*GOT entry for strcopy in this program is always 24 bytes from 
+    &_GLOBAL_OFFSET_TABLE_; therefore adding 3-- (3*8 = 24)*/ 
+    
     *(void **)GOT_FUNC = func_addr; 
 
     //function call

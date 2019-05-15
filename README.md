@@ -1,6 +1,6 @@
 # Self-linker
 
-Middlebury College CS315 Systems Programming- Fall 2018: This assignment implements its own runtime linking. The executable will be a program that, when run, will call a function in libc that does not cause the official linker to run. This call is preceded by code that obviates the need to call the official linker (by examining addresses within the GOT and hardcodes memory addresses as necessary). 
+Fall 2018: This assignment implements its own runtime linking. The executable will be a program that, when run, will call a function in libc that does not cause the official linker to run. This call is preceded by code that obviates the need to call the official linker (by examining addresses within the GOT and hardcodes memory addresses as necessary). 
 
 * **Calder Birdsey** - *Initial work* - [c-birdsey](https://github.com/c-birdsey)
 
